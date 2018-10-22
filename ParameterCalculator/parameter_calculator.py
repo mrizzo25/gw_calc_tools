@@ -1,13 +1,14 @@
 import numpy as np
 import logging
+from astropy import constants as const
 
-SOLAR_MASS = 1.98847e30 # kg
-C = 2.98e8 # m/s            
-G = 6.674e-11 # m^3 / (kg^2 s^2)
+M_SUN = const.M_sun
+G = const.G
+C = const.c
 
 # Sample default parameter values for M,S,L
-_M1 = 1.5 * SOLAR_MASS
-_M2 = 1.5 * SOLAR_MASS
+_M1 = 1.5 * M_SUN
+_M2 = 1.5 * M_SUN
 _S1 = np.array([2e42, 0., 0.])
 _S2 = np.array([3e42, 10.5, 0])
 _L = np.array([4e43, 10.5, 10.5])
